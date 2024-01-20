@@ -1,8 +1,4 @@
--bootloader
--vga
-  -printf function
--keyboard
 -memory
   -fat32
 -video
--cpu
+-multitasking
