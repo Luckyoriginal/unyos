@@ -17,15 +17,15 @@ void k_main(void ){
         : "c" (ecx)
     );
 
-    // Appeler la fonction d'affichage (PrintInt)
-  memory_init();
-  terminal_initialize();
-  int* x = memory_malloc(sizeof(int)*32);
+  memory_init(); //initialisation de la memoire
+  terminal_initialize();// inittialisation du terminal
+  int* x = memory_malloc(sizeof(int)*32);//test de l'alocateur
   terminal_write("hello world\n");
   for(int i=0;i<32;i++){
     x[i]=i;
     terminal_write_int(x[i]);
   }
+    terminal_write("init disk\n");
   disk_get_status();
   long start = time_get();
   time_delay(1000000000);
